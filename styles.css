@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+:root {
+/* ### Primary */
+
+--Linear-gradient/* (active input border) */: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+-Red/* (input errors) */: hsl(0, 100%, 66%);
+
+/* ### Neutral */
+
+--White: hsl(0, 0%, 100%);
+--Light-grayish-violet: hsl(270, 3%, 87%);
+--Dark-grayish-violet: hsl(279, 6%, 55%);
+--Very-dark-violet: hsl(278, 68%, 11%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 18px;
+}
+
+
+main {
+    background-image: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: 30% 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#card-front {
+    background-image: url(images/bg-card-front.png);
+    background-repeat: no-repeat;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: white;
+    width: 17rem;
+    height: 10rem;
+    margin-bottom: 1.5rem;
+    margin-left: 15%;
+}
+
+#card-logo {
+    margin-bottom: 2rem;
+}
+
+
+h1 {
+    font-size: 1.05rem;
+    font-weight: lighter;
+    letter-spacing: .15rem;
+}
+
+#card-name {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5rem;
+}
+
+h2 {
+    font-size: .7rem;
+    font-weight: lighter;
+}
+
+#card-name span {
+    font-size: .7rem;
+}
+
+#card-back {
+    background-image: url(images/bg-card-back.png);
+    background-repeat: no-repeat;
+    background-size: 17rem;
+    width: 17rem;
+    height: 10rem;
+    border-radius: .5rem;
+    color: white;
+    margin-left: 30%;
+    position: relative;
+}
+
+#card-back span {
+    position: absolute;
+    top: 4.1rem;
+    left: 13.5rem;
+    font-size: .7rem;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 30rem;
+   
+}
+
+label {
+    margin-top: 1rem;
+    font-size: .7rem;
+}
+
+input {
+    padding: .3rem;
+    border: .5px solid var(--Light-grayish-violet);
+    border-radius: .2rem;
+}
+
+input.invalid-input:focus {
+    outline: 1px solid red;
+}
+
+#confirmBtn, button {
+    margin-top: 1rem;
+    padding: .5rem;
+    background-color: var(--Very-dark-violet);
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    width: 100%;
+}
+
+#exp-cvc-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#exp-date-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#cvc-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: .5rem;
+    width: 100%;
+}
+
+#form-message .error {
+    display: none;
+    font-size: .6rem;
+    color: red; 
+}
+
+#form-message {
+    width: 50%;
+    display: flex;
+    justify-content: center;;
+}
+
+#thank-you {
+    display: none;
+    text-align: center;
+}
+
+
+#thank-you p{
+    margin: 1rem;
+}
+
+@media only screen and (max-width: 768px){
+    html {
+        font-size: 16px;
+    }
+    main {
+        flex-direction: column;
+        background-image: url(images/bg-main-mobile.png);
+        background-position: top;
+        background-size: 100% 35%;
+        justify-content: flex-start;
+    }
+
+    #card-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4rem;
+        margin-top: 2rem;
+    }
+
+    #card-front {
+        background-image: url(images/bg-card-front.png);
+        background-repeat: no-repeat;
+        border-radius: .5rem;
+        padding: 1rem;
+        color: white;
+        width: 17rem;
+        height: 10rem;
+        margin-top: -4rem;
+        z-index: 1;
+        margin-left: 0;
+        margin-right: 5rem;
+    }
+
+    #card-logo {
+        margin-bottom: 1rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    #card-back {
+        background-image: url(images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 17rem;
+        height: 10rem;
+        border-radius: .5rem;
+        color: white;
+        margin-left: 5rem;
+
+    }
+
+    #card-back span {
+        position: absolute;
+        top: 4.3rem;
+        left: 13.5rem;
+        font-size: .7rem;
+    }
+
+    #form-message {
+        width: 90%;
+        margin-top: 5rem;
+    }
+
+    form {
+        width: 100%;
+        margin-left: 1rem;
+    }
+}
